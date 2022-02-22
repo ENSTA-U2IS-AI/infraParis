@@ -620,7 +620,7 @@ div#main-nav {
 
 #service {
     padding: 60px 0px;
-    background: url('../img/slide4.jpg') top left no-repeat !important;
+    /* background: url('../img/slide4.jpg') top left no-repeat !important; */
 }
 #service h2{
   color: #fff;
