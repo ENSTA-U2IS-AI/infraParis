@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>Amaze Photography Bootstrap HTML5 Template | Webthemez</title>
+<title>MUAD: A synthetic dataset with multiple uncertainties for autonomous driving</title>
 <link rel="icon" href="favicon.png" type="image/png">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -29,18 +29,18 @@
     <div class="carousel-inner">
         <div class="active item">
 		<div class="caption zoomIn wow animated"> 		 
-              <h2>PASSION <br/><strong>Beauty can be seen in all things</strong></h2>
-              </div>
+              <h2>MUAD Dataset</h2><br/><h4><strong>Multiple Uncertainties for Autonomous Driving</strong></h4>
+    </div>
 			  
 		<img class="" src="img/slide1.jpg" alt=""></div>
         <div class="item">
 		<div class="caption zoomIn wow animated"> 		 			 
-              <h2>HOBBY<br/><strong>Best Dreams Happen</strong></h2>
+      <h2>MUAD Dataset</h2><br/><h4><strong>8500 annotated images with weather conditions with different levels of disturbance and OOD objects. </strong></h4>
               </div>
 			  <img class="" src="img/slide2.jpg" alt=""></div>
         <div class="item">
 		<div class="caption zoomIn wow animated"> 		 			
-              <h2>MY WORLD<br/><strong>Take it before its too late</strong></h2>
+      <h2>MUAD Dataset</h2><br/><h4><strong>4 supported computer vision tasks</strong></h4>
              </div><img class="" src="img/slide3.jpg" alt=""></div>
     </div>
     <!-- Carousel nav -->
@@ -60,10 +60,9 @@
 	    <div id="main-nav" class="collapse navbar-collapse navStyle">
 			<ul class="nav navbar-nav" id="mainNav">
 			  <li class="active"><a href="#carousel" class="scroll-link">Home</a></li>
-			  <li><a href="#aboutUs" class="scroll-link">About Me</a></li>
-			  <li><a href="#service" class="scroll-link">My Skills</a></li>
-			  <li><a href="#Portfolio" class="scroll-link">Portfolio</a></li> 
-			  <li><a href="#experience" class="scroll-link">Awards</a></li> 
+			  <li><a href="#overview" class="scroll-link">Overview</a></li>
+			  <li><a href="#download" class="scroll-link">Download</a></li>
+			  <li><a href="#citation" class="scroll-link">Citation</a></li>
 			  <li><a href="#contact" class="scroll-link">Contact</a></li>
 			</ul>
       </div>
@@ -73,49 +72,119 @@
 </header>
 <!--Header_section--> 
 
-<section id="aboutUs"><!--Aboutus-->
-<div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
+<br />
+<br />
+<section id="overview"><!--overview-->
+<div class="inner_wrapper about-us overview-container fadeInLeft animated wow">
   <div class="container">
-    <h2>About Me</h2>
-	<h6>A persone who loves Nature and It's creations</h6>
+    <h2>Overview</h2>
+	<h6>A Synthetic Dataset with Multiple Uncertainties for Autonomous Driving</h6>
     <div class="inner_section">
  <div class="row">
-      <div class="col-md-6"> <img class="img-responsive" src="img/about1.png" align=""> </div>
+   
+      <div class="col-md-6"> <img class="img-responsive" src="img/examples.png" align=""> </div>
       <div class="col-md-6">
-        <h3>My Passion</h3>
-        <p>Lorem ipsum dolor sit amet, quo meis voluptaria, erant bonorum albucius et per, ei placerat eu, te eos porro veniam. An everti maiorum detracto mea. Eu eos dicam voluptaria, erant bonorum albucius et per, ei sapientem accommodare est. Saepe dolorum constituam ei vel. Te sit malorum ceteros repudiandae, ne tritani adipisci vis.</p> 
-         
-        <p>Lorem ipsum dolor sit amet, voluptaria, erant bonorum albucius et per, ei meis audire placerat eu, te eos porro veniam. An everti maiorum detracto mea. Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum gravida tortor orci ipsum gravida tortor. 
-									</p>
+        <h3>MUAD</h3>
+        <p>We introduce MUAD, a sysnthetic dataset for autonomous driving with multiple uncertainty types and tasks. 
+          It contains 3420 images in the train set, and 492 in the validation set. The test set is composed of 4588 images divided as follows: 
+          551 in thenormal set, 1064 in the OOD set, 1552 in the low adv. set and 1421 images in the high adv. set.  
+          All of these sets cover day and night conditions with 2/3 of day images and 1/3 of night images.   
+          Test datasets address diverse weather conditions (rain, snow, and fog with different levels).</p> 
+
+          <ul class="about-us-list">
+            <li class="points2"><b>normal set</b>: images  without  OOD  objects  nor  adversarial  conditions</li> 
+            <li class="points2"><b>OOD set</b>: images containing OOD objects and without adversarial conditions </li>
+            <li class="points2"><b>low adv. set</b>: images containing both OOD objects and medium intensity adversarial conditions (either fog, rain or snow)</li>
+            <li class="points2"><b>high adv. set</b>: images containing both OOD objects and high intensity adversarial conditions (either fog, rain or snow)</li>
+          </ul>
+
+        <p>MUAD supports four tasks:</p>
 
 									<ul class="about-us-list">
-										<li class="points">Consectetur Morbi sagittis, sem quisci ipsum gravida tortor</li> 
-                                        <li class="points">Sagittis, sem quis lacinia faucibus, orci ipsum gravida </li>
-										<li class="points">Ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci</li>
-									</ul><!-- /.about-us-list -->
-								 
+										<li class="points"><b>Sementic segmentation</b></li> 
+                    <li class="points"><b>Depth estimation</b></li>
+										<li class="points"><b>Object detection</b></li>
+										<li class="points"><b>Instance detection</b></li>
+									</ul>
+
+        <p>Overview of annotated classes:</p>
+
+        <table><thead><tr><td>Cityscapes classes</td><td>MUAD classes</td><td>nb. of images with the annotations</td></tr></thead><tbody><tr><td>Road</td><td>Bots, Tram Tracks, Crosswalk, Parking Area, Garbage - Road, Road Lines, Sewer Longitudinal Crack, Transversal Crack, Road, Asphalt hole, Polished Aggregate, Vegetation - Road, Sewer - Road, Construction Concrete</td><td>8451</td></tr><tr><td>Sidewalk</td><td>Lane Bike, Kerb Stone, Sidewalk, Kerb Rising Edge</td><td>8344</td></tr><tr><td>Wall</td><td>Wall</td><td>1009</td></tr><tr><td>Fence</td><td>Construction Fence, Fences</td><td>7949</td></tr><tr><td>Pole</td><td>Traffic Signs Poles or Structure, Traffic Lights Poles, Street lights, Lamp</td><td>8380</td></tr><tr><td>Traffic light</td><td>Traffic Lights Head, Traffic Cameras, Traffic Lights Bulb (red, yellow, green)</td><td>7633</td></tr><tr><td>Traffic sign</td><td>Traffic Signs</td><td>2346</td></tr><tr><td>Vegetation</td><td>Vegetation</td><td>8468</td></tr><tr><td>Terrain</td><td>Terrain, Tree Pit</td><td>7774</td></tr><tr><td>Sky</td><td>Sky</td><td>8007</td></tr><tr><td>Person</td><td>Walker, All colors of Construction Helmet, All colors of Safety Vest, Umbrella, People</td><td>8240</td></tr><tr><td>Rider</td><td>Cyclist, Biker</td><td>3470</td></tr><tr><td>Car</td><td>Car, Beacon Light, Van, Ego Car</td><td>8423</td></tr><tr><td>Truck</td><td>Truck</td><td>5090</td></tr><tr><td>Bus</td><td>Bus</td><td>0</td></tr><tr><td>Train</td><td>Train, Subway</td><td>2240</td></tr><tr><td>Motocycle</td><td>Motorcycle, Segway, Scooter Child</td><td>2615</td></tr><tr><td>Bicycle</td><td>Bicycle, Kickbike, Tricycle</td><td>2793</td></tr><tr><td>Background</td><td>Others</td><td>-</td></tr></tbody></table>
+
+
       </div>
     </div>
 	     </div>
   </div> 
   </div>
 </section>
-<!--Aboutus--> 
+<!--overview--> 
 
 
-<!--Service-->
-<section  id="service">
+<!--download-->
+<section  id="download">
   <div class="container">
-    <h2>My Skills</h2>
+<br />
+<br />
+    <h2>Download</h2>
 	<h6>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</h6>
     <div class="service_wrapper">
       <div class="row">
-        <div class="col-md-3">
+
+        <div class="col-md-auto">
 		<div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-tree"></i></span> </div>
           <div class="service_block">
             
-            <h3 class="animated fadeInUp wow">Photography</h3>
-            <p class="animated fadeInDown wow">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <h3 class="animated fadeInUp wow">Dataset1</h3>
+            <p class="animated fadeInDown wow">descriptions. </p>
+          </div>
+        </div>
+        <div class="col-md-auto"> 
+		<div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div> 
+		<div class="service_block">
+            <h3 class="animated fadeInUp wow">Dataset2</h3>
+            <p class="animated fadeInDown wow">descriptions.  </p>
+          </div>
+        </div>
+        <div class="col-md-auto">
+		<div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-building-o "></i></span> </div>
+          <div class="service_block">
+            
+            <h3 class="animated fadeInUp wow">Dataset3</h3>
+            <p class="animated fadeInDown wow">descriptions.  </p>
+          </div>
+        </div>
+	 
+    </div>
+  </div>
+</section>
+<!--download-->  
+
+<!--citation-->
+<section  id="citation">
+  <div class="container">
+    <h2>Citation</h2>
+	<h6>If you use MUAD in your work, please cite this publication:</h6>
+    <div class="service_wrapper">
+
+    </div>
+  </div>
+</section>
+<!--citation-->  
+
+
+<!--contact-->
+<section  id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <!-- <h3 class="animated fadeInUp wow">Team</h3> -->
+    <div class="service_wrapper">
+      <div class="row">
+        <div class="col-md-3">
+            <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/gianni.jpg" align=""></span> </div>
+                <div class="service_block">
+                <h3 class="animated fadeInUp wow">Gianni Franchi</h3>
+            <p class="animated fadeInDown wow">U2IS, ENSTA Paris, Institut Polytechnique de Paris</p>
           </div>
         </div>
         <div class="col-md-3"> 
@@ -146,307 +215,8 @@
     </div>
   </div>
 </section>
-<!--Service-->  
+<!--contact-->  
 
-<!-- Portfolio -->
-<section id="Portfolio" class="content"> 
-  
-  <!-- Container -->
-  <div class="container portfolio_title"> 
-    
-    <!-- Title -->
-    <div class="section-title">
-      <h2>Portfolio</h2>
-	<h6>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</h6>
-	  
-    </div>
-    <!--/Title --> 
-    
-  </div>
-  <!-- Container -->
-  
-  <div class="portfolio-top"></div>
-  
-  <!-- Portfolio Filters -->
-  <div class="portfolio"> 
-    
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a id="all" href="#" data-filter="*" class="active">
-          <h5>All</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".nature">
-          <h5>People</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".wildlife">
-          <h5>Animal</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".citylife">
-          <h5>Nature</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".animals">
-          <h5>Sea Scape</h5>
-          </a></li> 
-      </ul>
-    </div>
-    <!--/Portfolio Filters --> 
-    
-    <!-- Portfolio Wrapper -->
-    <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">  
-      <!-- Portfolio Item -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   animals isotope-item effect-oscar">
-	   
-        <div class="portfolio_img"> 
-		<img src="img/portfolio_pic1.jpg"  alt="Portfolio 1"> </div> 
-			<figcaption>		
-				<div>
-				  <a href="img/portfolio_pic1.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item-->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic2.jpg" alt="Portfolio 1"> </div>
-        	<figcaption>		
-				<div>
-				  <a href="img/portfolio_pic2.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife  isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
-       <figcaption>		
-				<div>
-				  <a href="img/portfolio_pic3.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-      <!--/Portfolio Item--> 
-      
-      <!-- Portfolio Item-->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  citylife  nature web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic4.jpg" alt="Portfolio 1"> </div>
-         <figcaption>		
-				<div>
-				  <a href="img/portfolio_pic4.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-      </figure>
-      <!-- Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic5.jpg" alt="Portfolio 1"> </div>
-       <figcaption>		
-				<div>
-				  <a href="img/portfolio_pic5.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-      </figure>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic6.jpg" alt="Portfolio 1"> </div>
-       <figcaption>		
-				<div>
-				  <a href="img/portfolio_pic6.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-      </figure>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item  -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  wildlife web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic7.jpg" alt="Portfolio 1"> </div>       
-       <figcaption>		
-				<div>
-				  <a href="img/portfolio_pic7.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-       </figure>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   citylife isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/portfolio_pic8.jpg" alt="Portfolio 1"> </div>       
-      <figcaption>		
-				<div>
-				  <a href="img/portfolio_pic8.jpg" class="fancybox"> 
-					<h2>Warm <span>Oscar</span></h2>
-							<p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-				  </a>
-				</div>
-			</figcaption>
-        </figure>
-      <!--/Portfolio Item --> 
-      
-    </div>
-    <!--/Portfolio Wrapper --> 
-    
-  </div>
-  <!--/Portfolio Filters -->
-  
-  <div class="portfolio_btm"></div>
-  
-  
-  <div id="project_container">
-    <div class="clear"></div>
-    <div id="project_data"></div>
-  </div>
- 
-  
-</section>
-<!--/Portfolio --> 
-<section id="experience">
-<div class="container">
-    <section id="news" class="white-bg padding-top-bottom">
-	 <div class="section-title">
-      <h2>Awards</h2>
-	<h6>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</h6>
-	  
-    </div>
-    	<div class="container">
-			<div class="timeline">
-				<div class="date-title">
-					<span>2015</span>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 news-item">
-						<div class="news-content">
-							<div class="date">
-								<p>Oct</p> 
-							</div>
-							<h2 class="news-title">Best Photographer</h2> 
-							<span>Animal Care Group</span>
-							<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America or one who avoids a pain that produces no resultant pleasure…</p>
-							<a class="read-more" href="#">Read More</a>
-						</div>
-					</div>
-					
-					<div class="col-sm-6 news-item right">
-						<div class="news-content">
-							<div class="date">
-								<p>Aug</p> 
-							</div>
-							<h2 class="news-title">1st Winner</h2> 
-							<span>National Awareness</span>
-							<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America or one who avoids a pain that produces no resultant pleasure…</p>
-							<a class="read-more" href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-				 
-				
-				<div class="date-title">
-					<span>2013</span>
-				</div>
-				<div class="row">	
-					<div class="col-sm-6 news-item">
-						<div class="news-content">
-							<div class="date">
-								<p>Aug</p> 
-							</div>
-							<h2 class="news-title">Winner</h2> 
-							<span>Digital World</span>
-							<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America or one who avoids a pain that.</p>
-							<a class="read-more" href="#">Read More</a>
-						</div>
-					</div>
-					
-					<div class="col-sm-6 news-item right">
-						<div class="news-content">
-							<div class="date">
-								<p>Jan</p> 
-							</div>
-							<h2 class="news-title">Best Pic</h2> 
-							<span>Save World Org</span>
-							<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America or one who avoids a pain that produces.</p>
-							<a class="read-more" href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</div>				                                                      
-</section> 
-<!--Footer-->
-<footer class="footer_wrapper" id="contact">
-  <div class="container">
-    <section class="page_section contact" id="contact">
-      <div class="contact_section">
-        <h2>Contact Us</h2>
-	<h6>Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum</h6>
-     
-      </div>
-      <div class="row">
-        <div class="col-lg-4 wow fadeInLeft">	
-		 <div class="contact_info">
-                            <div class="detail">
-                                <h4>UNIQUE Infoway</h4>
-                                <p>104, Some street, NewYork, USA</p>
-                            </div>
-                            <div class="detail">
-                                <h4>call us</h4>
-                                <p>+1 234 567890</p>
-                            </div>
-                            <div class="detail">
-                                <h4>Email us</h4>
-                                <p>support@sitename.com</p>
-                            </div> 
-                        </div>
-       		  
-			  
-          
-          <ul class="social_links">
-            <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-            <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-            <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
-            <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li> 
-          </ul>
-        </div>
-        <div class="col-lg-8 wow fadeInLeft delay-06s">
-          <div class="form">
-            <input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-            <input class="input-btn" type="submit" value="send message">
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="container">
-    <div class="footer_bottom"><span>Copyright © reserved,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
-  </div>
-</footer>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

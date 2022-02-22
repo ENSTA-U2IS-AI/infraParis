@@ -293,6 +293,15 @@ h3 {
     margin: 0 0 5px 0;
 }
 
+h4 {
+    font-size: 38px;
+    color: #f5dc6e;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    margin: 0px 0 25px 0;
+    text-align: center;
+}
+
 h6 {
     font-size: 16px;
     color: #888888;
@@ -632,8 +641,8 @@ div#main-nav {
 }
 
 .service_icon {  
-    width: 90px;
-    height: 85px;
+    width: 150px;
+    height: 140px;
     margin: 0px auto 25px; 
 }
 
@@ -642,8 +651,8 @@ div#main-nav {
 .service_icon span {
     background: transparent; 
     display: block;
-    height: 95px;
-    width: 95px;
+    height: 150px;
+    width: 150px;
 	
     border: 1px solid #FFFFFF;
     border-radius: 50%;
@@ -664,8 +673,8 @@ text-align: center;
 .service_block h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 25px;
-    color: #fff;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
 margin: 35px 0 15px; 
 }
 #service h6{
@@ -991,6 +1000,11 @@ background-position-y: 70px;
 	font-size:14px;
 	padding-left:0px;
 }
+.points2{ 
+	margin-bottom: 10px;
+	font-size:14px;
+	padding-left:0px;
+}
 .about-us p{
 	/*font-size: 0.9375em;*/
 	line-height: 1.625em;
@@ -1016,7 +1030,24 @@ background-position-y: 70px;
 	position: absolute;
 	font-family: FontAwesome;
 	font-size: 1.125em;
-	color: #F74D4D;
+	color: #11df45;
+	left: 0px;
+	top: 3px;
+}
+
+.about-us .points2{
+	position: relative;
+	list-style-type: none;
+	padding: 5px 0 5px 30px;
+	color: #010100;
+}
+
+.about-us .points2:before{
+	content: "\f054";
+	position: absolute;
+	font-family: FontAwesome;
+	font-size: 1.125em;
+	color: #000000;
 	left: 0px;
 	top: 3px;
 }
@@ -2475,4 +2506,15 @@ width: 99%;
 .read_more2{
 display:none;
 }
+}
+
+table{
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: smaller;
+}
+table,th,tr,td{
+    border-bottom: 1px solid #000000;
+    padding: 2px;
 }
