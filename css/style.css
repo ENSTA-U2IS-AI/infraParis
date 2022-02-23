@@ -75,13 +75,21 @@ a, a:hover, a:active {
 .carousel,
 .carousel-inner,
 .carousel-inner .item {
+    background-size: cover;
+    background-position: center,center;
   height: 100%;
 }
+.carousel-inner .item img{
+    background-size: cover;
+    background-position: center,center;
+  height: 100%;
+  width: 100%;
+}
 .item:nth-child(1) {
-  background: darkred;
+  background: orange;
 }
 .item:nth-child(2) {
-  background: red;
+  background: orange;
 }
 .item:nth-child(3) {
   background: orange;
