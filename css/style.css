@@ -204,10 +204,10 @@ font-size: 50px;
 /***** Oscar *****/
 /*---------------*/
 
-figure.effect-oscar {
+/* figure.effect-oscar { */
 	/* background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%); */
-	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
-}
+	/* background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%); */
+/* } */
 
 figure.effect-oscar img {
 	opacity: 1;
@@ -222,14 +222,14 @@ figure.effect-oscar figcaption {
 	transition: background-color 0.35s;
 }
 
-figure.effect-oscar figcaption::before {
+/* figure.effect-oscar figcaption::before {
 	position: absolute;
 	top: 30px;
 	right: 30px;
 	bottom: 30px;
 	left: 30px;
 	content: '';
-}
+} */
 
 figure.effect-oscar h2 {
 	opacity: 1;
@@ -237,7 +237,7 @@ figure.effect-oscar h2 {
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
-	color: #ffffff;
+	/* color: #ffffff; */
 }
 
 figure.effect-oscar figcaption::before,
@@ -252,7 +252,7 @@ figure.effect-oscar p {
 figure.effect-oscar:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-	color: #FFFFFF;
+	/* color: #FFFFFF; */
 }
 
 figure.effect-oscar:hover figcaption::before,
@@ -383,9 +383,9 @@ p {
     margin: 0 5px;
 }
 
-.navStyle ul li:first-child {
+/* .navStyle ul li:first-child { */
 	/*margin:0px;*/;
-}
+/* } */
 
 .navStyle ul li:last-child {
     margin: 0 0 0 23px;
@@ -637,8 +637,8 @@ div#main-nav {
     padding: 40px 0 40px;
 }
 
-.service_section {
-}
+/* .service_section { */
+/* } */
 
 .service_block {
     text-align: center;
@@ -729,7 +729,6 @@ color:#fff;
 }
 
 .service-list-col1 i {
-    display:;
     color: #888;
     font-size: 19px;
     font-style: normal;
@@ -2432,7 +2431,7 @@ margin: 0 18px;
 .page_section.team{
 padding: 40px 0;
 }
-, #clients {
+#clients {
 padding: 40px 0;
 }
 .client_logos ul li {
