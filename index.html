@@ -124,7 +124,7 @@
 									</ul>
 
         <p><b>Overview of annotated classes:</b></p>
-          <p> There are a total of XX fine grained classes, which are also aggregated in order to facilitate the use along with other datasets, e.g. Citiscapes:</p>
+          <p> There are a total of 155 fine grained classes, which are also aggregated in order to facilitate the use along with other datasets, e.g. Citiscapes:</p>
           <table><tr><td>Cityscapes classes</td><td>MUAD classes</td><td>nb. of images with the annotations</td></tr><tr><td>Road</td><td>Bots, Tram Tracks, Crosswalk, Parking Area, Garbage - Road, Road Lines, Sewer Longitudinal Crack, Transversal Crack, Road, Asphalt hole, Polished Aggregate, Vegetation - Road, Sewer - Road, Construction Concrete</td><td>9055</td></tr><tr><td>Sidewalk</td><td>Lane Bike, Kerb Stone, Sidewalk, Kerb Rising Edge</td><td>8948</td></tr><tr><td>Building</td><td>House, Construction Scaffold, Building, Air Conditioning, Construction Container, TV Antenna, Terrace, Water Tank, Pergola Garden, Stairs, Dog House, Sunshades, Railings, Construction Stock, Marquees, Hangar Airport</td><td>9089</td></tr><tr><td>Wall</td><td>Wall</td><td>1101</td></tr><tr><td>Fence</td><td>Construction Fence, Fences</td><td>8622</td></tr><tr><td>Pole</td><td>Traffic Signs Poles or Structure, Traffic Lights Poles, Street lights, Lamp</td><td>8984</td></tr><tr><td>Traffic light</td><td>Traffic Lights Head, Traffic Cameras, Traffic Lights Bulb (red, yellow, green)</td><td>8222</td></tr><tr><td>Traffic sign</td><td>Traffic Signs</td><td>2672</td></tr><tr><td>Vegetation</td><td>Vegetation</td><td>9072</td></tr><tr><td>Terrain</td><td>Terrain, Tree Pit</td><td>8377</td></tr><tr><td>Sky</td><td>Sky</td><td>8591</td></tr><tr><td>Person</td><td>Walker, All colors of Construction Helmet, All colors of Safety Vest, Umbrella, People</td><td>8843</td></tr><tr><td>Rider</td><td>Cyclist, Biker</td><td>3470</td></tr><tr><td>Car</td><td>Car, Beacon Light, Van, Ego Car</td><td>9026</td></tr><tr><td>Truck</td><td>Truck</td><td>5533</td></tr><tr><td>Bus</td><td>Bus</td><td>0</td></tr><tr><td>Train</td><td>Train, Subway</td><td>2240</td></tr><tr><td>Motorcycle</td><td>Motorcycle, Segway, Scooter Child</td><td>2615</td></tr><tr><td>Bicycle</td><td>Bicycle, Kickbike, Tricycle</td><td>2816</td></tr><tr><td>Animals</td><td>Cow, Bear, Deer, Moose</td><td>603</td></tr><tr><td>Objects anomalies</td><td>Stand food, Trash can, garbage bag</td><td>352</td></tr><tr><td>Background</td><td>Others</td><td>-</td></tr></table>
       </div>
     </div>
@@ -163,9 +163,9 @@
         <li><a id="all" href="#" data-filter="*" class="active">
           <h5>All</h5>
           </a></li>
-        <li><a class="" href="#" data-filter=".normal">
-          <h5>Normal set</h5>
-          </a></li>
+        <!-- <li><a class="" href="#" data-filter=".normal"> -->
+          <!-- <h5>Normal set</h5> -->
+          <!-- </a></li> -->
         <li><a class="" href="#" data-filter=".ood">
           <h5>OOD set</h5>
           </a></li>
@@ -178,20 +178,6 @@
 
       <!-- Portfolio Wrapper -->
     <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">  
-      <!-- Portfolio Item -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   normal isotope-item effect-oscar">
-        <div class="portfolio_img"> 
-		<img src="img/labelr_normal.png"  alt="Portfolio 1"> </div> 
-			<figcaption>		
-				<h2>
-				  <a href="img/color_normal.png"   alt="Portfolio 1"> 
-            <div class="portfolio_img"> 
-              <img src="img/color_normal.png"  alt="Portfolio 1"> </div> 
-				  </a>
-				</h2>
-			</figcaption>
-        </figure>
-      <!--/Portfolio Item --> 
       
       <!-- Portfolio Item-->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  ood isotope-item effect-oscar">
@@ -230,6 +216,19 @@
                 <a href="img/color_adv2.png"   alt="Portfolio 1"> 
                   <div class="portfolio_img"> 
                     <img src="img/color_adv2.png"  alt="Portfolio 1"> </div> 
+                </a>
+              </h2>
+            </figcaption>
+      </figure>
+
+      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  high  nature web isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="img/label_adv3.png"  alt="Portfolio 1"> </div> 
+            <figcaption>		
+              <h2>
+                <a href="img/color_adv3.png"   alt="Portfolio 1"> 
+                  <div class="portfolio_img"> 
+                    <img src="img/color_adv3.png"  alt="Portfolio 1"> </div> 
                 </a>
               </h2>
             </figcaption>
