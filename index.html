@@ -36,7 +36,7 @@
     
     <div class="item">
 		<div class="caption zoomIn wow animated"> 		 			 
-        <h2>MUAD Dataset</h2><br/><h4><strong>8500 annotated images with weather conditions with different levels of disturbance and OOD objects. </strong></h4>
+        <h2>MUAD Dataset</h2><br/><h4><strong>8500 annotated images with different levels of weather conditions and OOD objects. </strong></h4>
     </div><img class="d-block w-100" src="img/slide2.jpg" alt="">
     </div>
     
@@ -66,9 +66,12 @@
 			<ul class="nav navbar-nav" id="mainNav">
 			  <li class="active"><a href="#carousel" class="scroll-link">Home</a></li>
 			  <li><a href="#overview" class="scroll-link">Overview</a></li>
-        <li><a href="#Portfolio" class="scroll-link">Examples</a></li> 
+        <!-- <li><a href="#Portfolio" class="scroll-link">Examples</a></li>  -->
+			  <li><a href="#licence" class="scroll-link">Terms of use</a></li>
 			  <li><a href="#download" class="scroll-link">Download</a></li>
 			  <li><a href="#citation" class="scroll-link">Citation</a></li>
+			  <li><a href="#acknowledgements" class="scroll-link">Acknowledgements</a></li>
+			  <li><a href="#contributors" class="scroll-link">Contributors</a></li>
 			  <li><a href="#contact" class="scroll-link">Contact</a></li>
 			</ul>
       </div>
@@ -88,55 +91,64 @@
     <div class="inner_section">
  <div class="row">
    
-      <div class="col-md-6"> <img class="img-responsive" src="img/examples.png" align=""> </div>
       <div class="col-md-6">
-        <h3>MUAD</h3>
-        <p>We introduce MUAD, a sysnthetic dataset for autonomous driving with multiple uncertainty types and tasks. 
-          It contains 3420 images in the train set, and 492 in the validation set. The test set is composed of 4588 images divided as follows: 
-          551 in thenormal set, 1064 in the OOD set, 1552 in the low adv. set and 1421 images in the high adv. set.  
-          All of these sets cover day and night conditions with 2/3 of day images and 1/3 of night images.   
-          Test datasets address diverse weather conditions (rain, snow, and fog with different levels).</p> 
-
-          <ul class="about-us-list">
-            <li class="points2"><b>normal set</b>: images  without  OOD  objects  nor  adversarial  conditions</li> 
-            <li class="points2"><b>OOD set</b>: images containing OOD objects and without adversarial conditions </li>
-            <li class="points2"><b>low adv. set</b>: images containing both OOD objects and medium intensity adversarial conditions (either fog, rain or snow)</li>
-            <li class="points2"><b>high adv. set</b>: images containing both OOD objects and high intensity adversarial conditions (either fog, rain or snow)</li>
+        <h3><font size="5">MUAD</font></h3>
+        <p>We introduce MUAD, a synthetic dataset for autonomous driving with multiple uncertainty types and tasks. 
+          It contains 3420 images in the train set, and 492 in the validation set. The test set is composed of 6588 images divided as follows: 
+          551 in the normal set, 100 in the normal set no shadow, 1664 in the OOD set, 600 in the low adversity set and 600 images in the high adversity set 
+          1552 in the low adversity with OOD set and 1421 images in the high adversity with OOD set. 
+          All of these sets cover day and night conditions, with 2/3 being day images and 1/3 night images.
+          Test datasets address diverse weather conditions (rain, snow, and fog with two different intensity levels) and multiple OOD objects.</p> 
+          <img class="img-responsive" src="img/examples.png" align=""> 
+      </div>
+      
+      <div class="col-md-6">
+        <p><b>MUAD has seven test sets:</b></p>
+        <ul class="about-us-list">
+            <li class="points2"><b>normal set</b>: images without OOD objects nor adverse conditions</li> 
+            <li class="points2"><b>normal set no shadow</b>: images without OOD objects nor adversity  conditions and we simulate the sun like if it was 12:00 am so the shadow is minimum</li> 
+            <li class="points2"><b>OOD set</b>: images containing OOD objects and without adversity  conditions </li>
+            <li class="points2"><b>low adversity set</b>: images containing medium intensity adversity conditions (either fog, rain or snow)</li>
+            <li class="points2"><b>high adversity set</b>: images containing high intensity adversity conditions (either fog, rain or snow)</li>
+            <li class="points2"><b>low adversity with OOD set</b>: images containing both OOD objects and medium intensity adversity  conditions (either fog, rain or snow)</li>
+            <li class="points2"><b>high adversity with OOD set</b>: images containing both OOD objects and high intensity adversity  conditions (either fog, rain or snow)</li>
           </ul>
 
-        <p>MUAD supports four tasks:</p>
+        <p><b>MUAD supports four tasks:</b></p>
 
 									<ul class="about-us-list">
-										<li class="points"><b>Sementic segmentation</b></li> 
+										<li class="points"><b>Semantic segmentation</b></li> 
                     <li class="points"><b>Depth estimation</b></li>
 										<li class="points"><b>Object detection</b></li>
 										<li class="points"><b>Instance detection</b></li>
 									</ul>
 
-        <p>Overview of annotated classes:</p>
-
-        <table><thead><tr><td>Cityscapes classes</td><td>MUAD classes</td><td>nb. of images with the annotations</td></tr></thead><tbody><tr><td>Road</td><td>Bots, Tram Tracks, Crosswalk, Parking Area, Garbage - Road, Road Lines, Sewer Longitudinal Crack, Transversal Crack, Road, Asphalt hole, Polished Aggregate, Vegetation - Road, Sewer - Road, Construction Concrete</td><td>8451</td></tr><tr><td>Sidewalk</td><td>Lane Bike, Kerb Stone, Sidewalk, Kerb Rising Edge</td><td>8344</td></tr><tr><td>Wall</td><td>Wall</td><td>1009</td></tr><tr><td>Fence</td><td>Construction Fence, Fences</td><td>7949</td></tr><tr><td>Pole</td><td>Traffic Signs Poles or Structure, Traffic Lights Poles, Street lights, Lamp</td><td>8380</td></tr><tr><td>Traffic light</td><td>Traffic Lights Head, Traffic Cameras, Traffic Lights Bulb (red, yellow, green)</td><td>7633</td></tr><tr><td>Traffic sign</td><td>Traffic Signs</td><td>2346</td></tr><tr><td>Vegetation</td><td>Vegetation</td><td>8468</td></tr><tr><td>Terrain</td><td>Terrain, Tree Pit</td><td>7774</td></tr><tr><td>Sky</td><td>Sky</td><td>8007</td></tr><tr><td>Person</td><td>Walker, All colors of Construction Helmet, All colors of Safety Vest, Umbrella, People</td><td>8240</td></tr><tr><td>Rider</td><td>Cyclist, Biker</td><td>3470</td></tr><tr><td>Car</td><td>Car, Beacon Light, Van, Ego Car</td><td>8423</td></tr><tr><td>Truck</td><td>Truck</td><td>5090</td></tr><tr><td>Bus</td><td>Bus</td><td>0</td></tr><tr><td>Train</td><td>Train, Subway</td><td>2240</td></tr><tr><td>Motocycle</td><td>Motorcycle, Segway, Scooter Child</td><td>2615</td></tr><tr><td>Bicycle</td><td>Bicycle, Kickbike, Tricycle</td><td>2793</td></tr><tr><td>Background</td><td>Others</td><td>-</td></tr></tbody></table>
-
-
+        <p><b>Overview of annotated classes:</b></p>
+          <p> There are a total of XX fine grained classes, which are also aggregated in order to facilitate the use along with other datasets, e.g. Citiscapes:</p>
+          <table><tr><td>Cityscapes classes</td><td>MUAD classes</td><td>nb. of images with the annotations</td></tr><tr><td>Road</td><td>Bots, Tram Tracks, Crosswalk, Parking Area, Garbage - Road, Road Lines, Sewer Longitudinal Crack, Transversal Crack, Road, Asphalt hole, Polished Aggregate, Vegetation - Road, Sewer - Road, Construction Concrete</td><td>9055</td></tr><tr><td>Sidewalk</td><td>Lane Bike, Kerb Stone, Sidewalk, Kerb Rising Edge</td><td>8948</td></tr><tr><td>Building</td><td>House, Construction Scaffold, Building, Air Conditioning, Construction Container, TV Antenna, Terrace, Water Tank, Pergola Garden, Stairs, Dog House, Sunshades, Railings, Construction Stock, Marquees, Hangar Airport</td><td>9089</td></tr><tr><td>Wall</td><td>Wall</td><td>1101</td></tr><tr><td>Fence</td><td>Construction Fence, Fences</td><td>8622</td></tr><tr><td>Pole</td><td>Traffic Signs Poles or Structure, Traffic Lights Poles, Street lights, Lamp</td><td>8984</td></tr><tr><td>Traffic light</td><td>Traffic Lights Head, Traffic Cameras, Traffic Lights Bulb (red, yellow, green)</td><td>8222</td></tr><tr><td>Traffic sign</td><td>Traffic Signs</td><td>2672</td></tr><tr><td>Vegetation</td><td>Vegetation</td><td>9072</td></tr><tr><td>Terrain</td><td>Terrain, Tree Pit</td><td>8377</td></tr><tr><td>Sky</td><td>Sky</td><td>8591</td></tr><tr><td>Person</td><td>Walker, All colors of Construction Helmet, All colors of Safety Vest, Umbrella, People</td><td>8843</td></tr><tr><td>Rider</td><td>Cyclist, Biker</td><td>3470</td></tr><tr><td>Car</td><td>Car, Beacon Light, Van, Ego Car</td><td>9026</td></tr><tr><td>Truck</td><td>Truck</td><td>5533</td></tr><tr><td>Bus</td><td>Bus</td><td>0</td></tr><tr><td>Train</td><td>Train, Subway</td><td>2240</td></tr><tr><td>Motorcycle</td><td>Motorcycle, Segway, Scooter Child</td><td>2615</td></tr><tr><td>Bicycle</td><td>Bicycle, Kickbike, Tricycle</td><td>2816</td></tr><tr><td>Animals</td><td>Cow, Bear, Deer, Moose</td><td>603</td></tr><tr><td>Objects anomalies</td><td>Stand food, Trash can, garbage bag</td><td>352</td></tr><tr><td>Background</td><td>Others</td><td>-</td></tr></table>
       </div>
     </div>
 	     </div>
   </div> 
   </div>
-</section>
+
 <!--overview--> 
 
-
 <!-- Examples -->
-<section id="Portfolio" class="content"> 
+<!-- <section id="Portfolio" class="content">  -->
   
   <!-- Container -->
   <div class="container portfolio_title"> 
     
     <!-- Title -->
-    <div class="section-title">
-      <h2>Examples</h2>
-    </div>
+    <!-- <div class="section-title"> -->
+      <br>
+      <br>
+
+      <h3><center><font size="5">Examples</font></center></h3>
+      <br>
+      <h6>Move the mouse over the semantic segmentation label map, and the corresponding RGB image will appear.</h6>
+    <!-- </div> -->
 <!--/Title --> 
   </div>
   <!-- Container -->
@@ -147,7 +159,6 @@
   <div class="portfolio"> 
     
     <div id="filters" class="sixteen columns">
-      <h6>When you move your mouse to the semantic segmentation label map, the corresponding RGB image will appear.</h6>
       <ul class="clearfix">
         <li><a id="all" href="#" data-filter="*" class="active">
           <h5>All</h5>
@@ -158,11 +169,8 @@
         <li><a class="" href="#" data-filter=".ood">
           <h5>OOD set</h5>
           </a></li>
-        <li><a class="" href="#" data-filter=".low">
-          <h5>Low adv. set</h5>
-          </a></li>
         <li><a class="" href="#" data-filter=".high">
-          <h5>High adv. set</h5>
+          <h5>Adversity set</h5>
           </a></li> 
       </ul>
     </div>
@@ -171,14 +179,14 @@
       <!-- Portfolio Wrapper -->
     <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">  
       <!-- Portfolio Item -->
-      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   ood isotope-item effect-oscar">
+      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   normal isotope-item effect-oscar">
         <div class="portfolio_img"> 
-		<img src="img/label0.png"  alt="Portfolio 1"> </div> 
+		<img src="img/labelr_normal.png"  alt="Portfolio 1"> </div> 
 			<figcaption>		
 				<h2>
-				  <a href="img/color0.png"   alt="Portfolio 1"> 
+				  <a href="img/color_normal.png"   alt="Portfolio 1"> 
             <div class="portfolio_img"> 
-              <img src="img/color0.png"  alt="Portfolio 1"> </div> 
+              <img src="img/color_normal.png"  alt="Portfolio 1"> </div> 
 				  </a>
 				</h2>
 			</figcaption>
@@ -188,95 +196,84 @@
       <!-- Portfolio Item-->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  ood isotope-item effect-oscar">
         <div class="portfolio_img"> 
-          <img src="img/label1.png"  alt="Portfolio 1"> </div> 
+          <img src="img/label_ood.png"  alt="Portfolio 1"> </div> 
             <figcaption>		
               <h2>
-                <a href="img/color1.png"   alt="Portfolio 1"> 
+                <a href="img/color_ood.png"   alt="Portfolio 1"> 
                   <div class="portfolio_img"> 
-                    <img src="img/color1.png"  alt="Portfolio 1"> </div> 
+                    <img src="img/color_ood.png"  alt="Portfolio 1"> </div> 
                 </a>
               </h2>
             </figcaption>
         </figure>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <!-- <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  ood  isotope-item effect-oscar">
-        <div class="portfolio_img"> 
-          <img src="img/label2.png"  alt="Portfolio 1"> </div> 
-            <figcaption>		
-              <h2>
-                <a href="img/color2.png"   alt="Portfolio 1"> 
-                  <div class="portfolio_img"> 
-                    <img src="img/color2.png"  alt="Portfolio 1"> </div> 
-                </a>
-              </h2>
-            </figcaption>
-        </figure> -->
-      <!--/Portfolio Item--> 
       
       <!-- Portfolio Item-->
-      <!-- <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  ood  nature web isotope-item effect-oscar">
+      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  high  nature web isotope-item effect-oscar">
         <div class="portfolio_img"> 
-          <img src="img/label3.png"  alt="Portfolio 1"> </div> 
+          <img src="img/label_adv1.png"  alt="Portfolio 1"> </div> 
             <figcaption>		
               <h2>
-                <a href="img/color3.png"   alt="Portfolio 1"> 
+                <a href="img/color_adv1.png"   alt="Portfolio 1"> 
                   <div class="portfolio_img"> 
-                    <img src="img/color3.png"  alt="Portfolio 1"> </div> 
+                    <img src="img/color_adv1.png"  alt="Portfolio 1"> </div> 
                 </a>
               </h2>
             </figcaption>
-      </figure> -->
+      </figure>
       <!-- Portfolio Item --> 
+
+      <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  high  nature web isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="img/label_adv2.png"  alt="Portfolio 1"> </div> 
+            <figcaption>		
+              <h2>
+                <a href="img/color_adv2.png"   alt="Portfolio 1"> 
+                  <div class="portfolio_img"> 
+                    <img src="img/color_adv2.png"  alt="Portfolio 1"> </div> 
+                </a>
+              </h2>
+            </figcaption>
+      </figure>
       
   </div>
+</section>
   <!--/Portfolio Filters -->
   
-  <div class="portfolio_btm"></div>
+  <!-- <div class="portfolio_btm"></div>
   
   
   <div id="project_container">
     <div class="clear"></div>
     <div id="project_data"></div>
   </div>
- 
-  
-</section>
+  -->
+<!-- </section> -->
 
+<!--licence-->
+<br>
+<br>
+<br>
+<section  id="licence">
+  <div class="container">
+    <h2>Terms of use</h2>
+	<h3><center><font size="5">Copyright</font></center></h3>
+  <br>
+  <font size="3">Copyright for The MUAD Dataset is owned by Université Paris-Saclay (SATIE Laboratory, Gif-sur-Yvette, FR) and ENSTA Paris (U2IS Laboratory, Palaiseau).
+    Please read the <a>licence</a> carefully before downloading the dataset. The download and/or use of the dataset implies accepting the licence terms. </font>
+  <div class="service_wrapper">
+    </div>
+  </div>
+</section>
+<!--licence--> 
 
 <!--download-->
 <section  id="download">
   <div class="container">
-<br />
-<br />
     <h2>Download</h2>
     <div class="service_wrapper">
       <div class="row">
-
-        <div class="col-md-auto">
-		<div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa fa-tree"></i></span> </div>
-          <div class="service_block">
-            
-            <h3 class="animated fadeInUp wow">Dataset1</h3>
-            <p class="animated fadeInDown wow">descriptions. </p>
-          </div>
-        </div>
-        <div class="col-md-auto"> 
-		<div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa fa-crosshairs"></i></span> </div> 
-		<div class="service_block">
-            <h3 class="animated fadeInUp wow">Dataset2</h3>
-            <p class="animated fadeInDown wow">descriptions.  </p>
-          </div>
-        </div>
-        <div class="col-md-auto">
-		<div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa fa-building-o "></i></span> </div>
-          <div class="service_block">
-            
-            <h3 class="animated fadeInUp wow">Dataset3</h3>
-            <p class="animated fadeInDown wow">descriptions.  </p>
-          </div>
-        </div>
+	<!-- <h6><b>You need to sign the document below and send it to xx@xx.com.  -->
+    <!-- The download link of the dataset will be emailed to you.</b></h6> -->
 	 
     </div>
   </div>
@@ -287,7 +284,7 @@
 <section  id="citation">
   <div class="container">
     <h2>Citation</h2>
-	<h6>If you use MUAD in your work, please cite this publication:</h6>
+    <font size="3">If you use MUAD in your work, please cite this publication:</font>
     <div class="service_wrapper">
 
     </div>
@@ -295,11 +292,22 @@
 </section>
 <!--citation-->  
 
+<!--Acknowledgements-->
+<section  id="acknowledgements">
+  <div class="container">
+    <h2>Acknowledgements</h2>
+    <font size="3">We gratefully acknowledge the support of DATAIA Paris-Saclay institute which supported the creation of the dataset (ANR–17–CONV–0003/RD42).</font>
+    <div class="service_wrapper">
+
+    </div>
+  </div>
+</section>
+<!--Acknowledgements-->  
 
 <!--contact-->
-<section  id="contact">
+<section  id="contributors">
   <div class="container">
-    <h2>Contact</h2>
+    <h2>Contributors</h2>
     <!-- <h3 class="animated fadeInUp wow">Team</h3> -->
     <div class="service_wrapper">
       <div class="row">
@@ -370,12 +378,40 @@
   </div>
 </div>
 </section>
+<!--contact-->   
+
+<!--contact-->
+<section  id="contact">
+  <div class="container">
+    <h2>contact</h2>
+    <h6>If you have any questions (about the dataset or this website), please feel free to contact:</h6>
+      <div class="col-md-4">
+        <h3 class="animated fadeInUp wow">Gianni Franchi</h3>
+          <h3 class="animated fadeInUp wow"><a href=mailto:<nowiki>gianni.franchi@ensta-paris.fr</a></h3>
+    </div>
+
+    <div class="col-md-4">
+      <h3 class="animated fadeInUp wow">Emanuel Aldea</h3>
+      <h3 class="animated fadeInUp wow"><a href=mailto:<nowiki>emanuel.aldea@universite-paris-saclay.fr</a></h3>
+      </div>
+
+    <div class="col-md-4">
+      <h3 class="animated fadeInUp wow">Xuanlong Yu</h3>
+      <h3 class="animated fadeInUp wow"><a href=mailto:<nowiki>xuanlong.yu@universite-paris-saclay.fr</a></h3>
+        </div>
+
+        </div>
+
+    </div>
+</section>
+<br>
+<br>
+<br>
+
 <!--contact-->  
 
-
-
 <!--Footer-->
-<footer class="footer_wrapper" id="contact">
+<footer class="footer_wrapper">
   <div class="container">
     <div class="footer_bottom"><span>Copyright © 2022 - <a href="https://muad-dataset.github.io/">MUAD</a> </span> </div>
   </div>
