@@ -276,7 +276,7 @@ figure.effect-oscar:hover img {
 ---------------------------------*/
 body {
     background: #fff;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     font-size: 14px;
     font-weight: normal;
     color: #888888;
