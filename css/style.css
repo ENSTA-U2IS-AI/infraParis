@@ -654,7 +654,11 @@ div#main-nav {
     margin: 0px auto 25px; 
 }
 
- 
+.service_icon_r{  
+    width: 100px;
+    height: 90px;
+    margin: 0px auto 25px; 
+}
 
 .service_icon span {
     background: transparent; 
