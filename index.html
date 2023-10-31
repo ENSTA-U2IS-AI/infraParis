@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>MUAD: A synthetic dataset with multiple uncertainties for autonomous driving</title>
+<title>InfraParis: A multi-modal and multi-task autonomous driving dataset</title>
 <link rel="icon" href="favicon.png" type="image/png">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -30,19 +30,19 @@
 
     <div class="active item">
 		<div class="caption zoomIn wow animated"> 		 
-        <h2>MUAD Dataset</h2><br/><h4><strong>Multiple Uncertainties for Autonomous Driving</strong></h4>
+        <h2>InfraParis Dataset</h2><br/><h4><strong>A multi-modal and multi-task autonomous driving dataset</strong></h4>
     </div><img class="" src="img/slide3.jpg" alt="">
     </div>
     
     <div class="item">
 		<div class="caption zoomIn wow animated"> 		 			 
-        <h2>MUAD Dataset</h2><br/><h4><strong>10413 annotated images with different levels of weather conditions and OOD objects. </strong></h4>
+        <h2>InfraParis Dataset</h2><br/><h4><strong>7,301 annotated images with different modalities and tasks. </strong></h4>
     </div><img class="d-block w-100" src="img/slide2.jpg" alt="">
     </div>
     
     <div class="item">
 		<div class="caption zoomIn wow animated"> 		 			
-      <h2>MUAD Dataset</h2><br/><h4><strong>4 supported computer vision tasks</strong></h4>
+      <h2>InfraParis Dataset</h2><br/><h4><strong>4 supported computer vision tasks</strong></h4>
     </div><img class="" src="img/slide1.jpg" alt="">
     </div>
 
@@ -85,47 +85,39 @@
 <div class="inner_wrapper about-us overview-container fadeInLeft animated wow">
   <div class="container">
     <h2>Overview</h2>
-	<h6>A Synthetic Dataset with Multiple Uncertainties for Autonomous Driving</h6>
+	<h6>InfraParis: A multi-modal and multi-task autonomous driving dataset</h6>
     <div class="inner_section">
  <div class="row">
    
       <div class="col-md-6">
-        <h3><font size="5">MUAD</font></h3>
-        <p>We introduce MUAD, a synthetic dataset for autonomous driving with multiple uncertainty types and tasks. 
-          It contains 10413 in total: 3420 images in the train set, 492 in the validation set and 6501 in the test set. The test set is divided as follows: 
-          551 in the normal set, 102 in the normal set no shadow, 1668 in the OOD set, 605 in the low adversity set and 602 images in the high adversity set 
-          1552 in the low adversity with OOD set and 1421 images in the high adversity with OOD set. 
-          All of these sets cover day and night conditions, with 2/3 being day images and 1/3 night images.
-          Test datasets address diverse weather conditions (rain, snow, and fog with two different intensity levels) and multiple OOD objects.</p> 
+        <h3><font size="5">InfraParis</font></h3>
+        <p>We present InfraParis, an extensive dataset designed for autonomous driving applications. This dataset is characterized by its multimodal and multitasking nature, encompassing a total of 7,301 data samples. Specifically, it consists of 6,567 images in the training set, 189 in the validation set, and 571 in the test set. InfraParis is structured to support various tasks across three distinct modalities: RGB, depth, and infrared. These tasks encompass object detection, semantic segmentation, and depth prediction.</p> 
           <img class="img-responsive" src="img/examples.png" align=""> 
       </div>
       
       <div class="col-md-6">
-        <p><b>MUAD has seven test sets:</b></p>
+        <p><b>      InfraParis encompasses four distinct tasks, each catering to different aspects of autonomous driving:</b></p>
         <ul class="about-us-list">
-            <li class="points2"><b>normal set</b>: images without OOD objects nor adverse conditions</li> 
-            <li class="points2"><b>low adversity with OOD set</b>: images containing both OOD objects and medium intensity adversity conditions (either fog, rain or snow)</li>
-            <li class="points2"><b>high adversity with OOD set</b>: images containing both OOD objects and high intensity adversity conditions (either fog, rain or snow)</li>
-            <li class="points2"><b>normal set no shadow</b>: images without OOD objects nor adversity conditions and we simulate the sun like if it was 12:00 am so the shadow is minimum</li> 
-            <li class="points2"><b>OOD set</b>: images containing OOD objects and without adversity conditions </li>
-            <li class="points2"><b>low adversity set</b>: images containing medium intensity adversity conditions (either fog, rain or snow)</li>
-            <li class="points2"><b>high adversity set</b>: images containing high intensity adversity conditions (either fog, rain or snow)</li>
-          
+            <li class="points2"><b>Semantic Segmentation Task</b>:This task involves images with associated semantic segmentation labels.</li> 
+            <li class="points2"><b>Object Detection Tas</b>: In this task, the dataset provides images with bounding boxes delineating pedestrians.</li> 
+            <li class="points2"><b>Supervised Depth Prediction Task</b>: For this task, the dataset includes images with ground truth depth information.</li> 
+            <li class="points2"><b>Unsupervised Depth Prediction Task</b>: Here, the dataset comprises sequences of images along with ground truth depth data.</li>  
+          </ul>
+      <div class="col-md-6">
+        <p><b>InfraParis has 4 modalities:</b></p>
+        <ul class="about-us-list">
+            <li class="points2"><b>RGB Images</b></li> 
+            <li class="points2"><b>Infrared Images</b></li>
+            <li class="points2"><b>RGB Video</b></li>
+            <li class="points2"><b>Depth Images </b></li> 
+   
           </ul>
 
-        <p><b>MUAD supports four tasks:</b></p>
-
-									<ul class="about-us-list">
-										<li class="points"><b>Semantic segmentation</b></li> 
-                    <li class="points"><b>Depth estimation</b></li>
-										<li class="points"><b>Object detection</b></li>
-										<li class="points"><b>Instance detection</b></li>
-									</ul>
 
         <p><b>Overview of annotated classes:</b></p>
           <p> There are a total of 155 fine grained classes, which are also aggregated in order to facilitate the use along with other datasets, e.g. Citiscapes:</p>
           <!-- <table><tr><td>Cityscapes classes</td><td>MUAD classes</td><td>nb. of images with the annotations</td></tr><tr><td>Road</td><td>Bots, Tram Tracks, Crosswalk, Parking Area, Garbage - Road, Road Lines, Sewer Longitudinal Crack, Transversal Crack, Road, Asphalt hole, Polished Aggregate, Vegetation - Road, Sewer - Road, Construction Concrete</td><td>9055</td></tr><tr><td>Sidewalk</td><td>Lane Bike, Kerb Stone, Sidewalk, Kerb Rising Edge</td><td>8948</td></tr><tr><td>Building</td><td>House, Construction Scaffold, Building, Air Conditioning, Construction Container, TV Antenna, Terrace, Water Tank, Pergola Garden, Stairs, Dog House, Sunshades, Railings, Construction Stock, Marquees, Hangar Airport</td><td>9089</td></tr><tr><td>Wall</td><td>Wall</td><td>1101</td></tr><tr><td>Fence</td><td>Construction Fence, Fences</td><td>8622</td></tr><tr><td>Pole</td><td>Traffic Signs Poles or Structure, Traffic Lights Poles, Street lights, Lamp</td><td>8984</td></tr><tr><td>Traffic light</td><td>Traffic Lights Head, Traffic Cameras, Traffic Lights Bulb (red, yellow, green)</td><td>8222</td></tr><tr><td>Traffic sign</td><td>Traffic Signs</td><td>2672</td></tr><tr><td>Vegetation</td><td>Vegetation</td><td>9072</td></tr><tr><td>Terrain</td><td>Terrain, Tree Pit</td><td>8377</td></tr><tr><td>Sky</td><td>Sky</td><td>8591</td></tr><tr><td>Person</td><td>Walker, All colors of Construction Helmet, All colors of Safety Vest, Umbrella, People</td><td>8843</td></tr><tr><td>Rider</td><td>Cyclist, Biker</td><td>3470</td></tr><tr><td>Car</td><td>Car, Beacon Light, Van, Ego Car</td><td>9026</td></tr><tr><td>Truck</td><td>Truck</td><td>5533</td></tr><tr><td>Bus</td><td>Bus</td><td>0</td></tr><tr><td>Train</td><td>Train, Subway</td><td>2240</td></tr><tr><td>Motorcycle</td><td>Motorcycle, Segway, Scooter Child</td><td>2615</td></tr><tr><td>Bicycle</td><td>Bicycle, Kickbike, Tricycle</td><td>2816</td></tr><tr><td>Animals</td><td>Cow, Bear, Deer, Moose</td><td>603</td></tr><tr><td>Objects anomalies</td><td>Stand food, Trash can, garbage bag</td><td>352</td></tr><tr><td>Background</td><td>Others</td><td>-</td></tr></table> -->
-      <table><tr><td>Cityscapes classes</td><td>MUAD classes</td><td>nb. of images with the annotations</td></tr><tr><td>Road</td><td>Bots, Tram Tracks, Crosswalk, Parking Area, Garbage - Road, Road Lines, Sewer Longitudinal Crack, Transversal Crack, Road, Asphalt Hole, Polished Aggregate, Vegetation - Road, Sewer - Road, Construction Concrete</td><td>9055</td></tr><tr><td>Sidewalk</td><td>Lane Bike, Kerb Stone, Sidewalk, Kerb Rising Edge</td><td>8948</td></tr><tr><td>Building</td><td>House, Construction Scaffold, Building, Air Conditioning, Construction Container, TV Antenna, Terrace, Water Tank, Pergola Garden, Stairs, Dog House, Sunshades, Railings, Construction Stock, Marquees, Hangar Airport</td><td>9089</td></tr><tr><td>Wall</td><td>Wall</td><td>1101</td></tr><tr><td>Fence</td><td>Construction Fence, Fences</td><td>8622</td></tr><tr><td>Pole</td><td>Traffic Signs Poles or Structure, Traffic Lights Poles, Street lights, Lamp</td><td>8984</td></tr><tr><td>Traffic light</td><td>Traffic Lights Head, Traffic Cameras, Traffic Lights Bulb (red, yellow, green)</td><td>8222</td></tr><tr><td>Traffic sign</td><td>Traffic Signs</td><td>2672</td></tr><tr><td>Vegetation</td><td>Vegetation</td><td>9072</td></tr><tr><td>Terrain</td><td>Terrain, Tree Pit</td><td>8377</td></tr><tr><td>Sky</td><td>Sky</td><td>8591</td></tr><tr><td>Person</td><td>Walker, All colors of Construction Helmet, All colors of Safety Vest, Umbrella, People</td><td>8843</td></tr><tr><td>Rider</td><td>Cyclist, Biker</td><td>3470</td></tr><tr><td>Car</td><td>Car, Beacon Light, Van, Ego Car</td><td>9026</td></tr><tr><td>Truck</td><td>Truck</td><td>5533</td></tr><tr><td>Bus</td><td>Bus</td><td>0</td></tr><tr><td>Train</td><td>Train, Subway</td><td>2240</td></tr><tr><td>Motorcycle</td><td>Motorcycle, Segway, Scooter Child</td><td>2615</td></tr><tr><td>Bicycle</td><td>Bicycle, Kickbike, Tricycle</td><td>2816</td></tr><tr><td>Animals</td><td>Cow, Bear, Deer, Moose</td><td>603</td></tr><tr><td>Objects anomalies</td><td>Stand Food, Trash Can, Garbage bag</td><td>352</td></tr><tr><td>Background</td><td>Others</td><td>-</td></tr></table>
+      <table><tr><td>Cityscapes classes</td><td>InfraParis</td><td>nb. of images with the annotations</td></tr><tr><td>Road</td><td>Bots, Tram Tracks, Crosswalk, Parking Area, Garbage - Road, Road Lines, Sewer Longitudinal Crack, Transversal Crack, Road, Asphalt Hole, Polished Aggregate, Vegetation - Road, Sewer - Road, Construction Concrete</td><td>9055</td></tr><tr><td>Sidewalk</td><td>Lane Bike, Kerb Stone, Sidewalk, Kerb Rising Edge</td><td>8948</td></tr><tr><td>Building</td><td>House, Construction Scaffold, Building, Air Conditioning, Construction Container, TV Antenna, Terrace, Water Tank, Pergola Garden, Stairs, Dog House, Sunshades, Railings, Construction Stock, Marquees, Hangar Airport</td><td>9089</td></tr><tr><td>Wall</td><td>Wall</td><td>1101</td></tr><tr><td>Fence</td><td>Construction Fence, Fences</td><td>8622</td></tr><tr><td>Pole</td><td>Traffic Signs Poles or Structure, Traffic Lights Poles, Street lights, Lamp</td><td>8984</td></tr><tr><td>Traffic light</td><td>Traffic Lights Head, Traffic Cameras, Traffic Lights Bulb (red, yellow, green)</td><td>8222</td></tr><tr><td>Traffic sign</td><td>Traffic Signs</td><td>2672</td></tr><tr><td>Vegetation</td><td>Vegetation</td><td>9072</td></tr><tr><td>Terrain</td><td>Terrain, Tree Pit</td><td>8377</td></tr><tr><td>Sky</td><td>Sky</td><td>8591</td></tr><tr><td>Person</td><td>Walker, All colors of Construction Helmet, All colors of Safety Vest, Umbrella, People</td><td>8843</td></tr><tr><td>Rider</td><td>Cyclist, Biker</td><td>3470</td></tr><tr><td>Car</td><td>Car, Beacon Light, Van, Ego Car</td><td>9026</td></tr><tr><td>Truck</td><td>Truck</td><td>5533</td></tr><tr><td>Bus</td><td>Bus</td><td>0</td></tr><tr><td>Train</td><td>Train, Subway</td><td>2240</td></tr><tr><td>Motorcycle</td><td>Motorcycle, Segway, Scooter Child</td><td>2615</td></tr><tr><td>Bicycle</td><td>Bicycle, Kickbike, Tricycle</td><td>2816</td></tr><tr><td>Animals</td><td>Cow, Bear, Deer, Moose</td><td>603</td></tr><tr><td>Objects anomalies</td><td>Stand Food, Trash Can, Garbage bag</td><td>352</td></tr><tr><td>Background</td><td>Others</td><td>-</td></tr></table>
         </div>
     </div>
 	     </div>
@@ -174,7 +166,9 @@
           </a></li> 
       </ul>
     </div>
-    <!--/Portfolio Filters --> 
+    <!--/Portfolio Filters -->  
+    
+
 
       <!-- Portfolio Wrapper -->
     <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">  
@@ -249,16 +243,16 @@
       <div class="service_wrapper">
       <div class="row">
         <div class="col-md-3">
-          <div class="service_icon_r delay-03s animated wow  zoomIn"> <span><a href="https://arxiv.org/abs/2203.01437"><img class="img-responsive" src="img/paper_icon.png" align=""></a></span> </div>
+          <div class="service_icon_r delay-03s animated wow  zoomIn"> <span><a href="https://arxiv.org/abs/2309.15751"><img class="img-responsive" src="img/paper_icon.png" align=""></a></span> </div>
           <div class="service_block"><h3 class="animated fadeInUp wow">Paper</h3></div>
       </div>
   
         <div class="col-md-3">
-          <div class="service_icon_r delay-03s animated wow  zoomIn"> <span><a href="https://github.com/ENSTA-U2IS/MUAD-Dataset"><img class="img-responsive" src="img/git.png" align=""></a></span> </div>
+          <div class="service_icon_r delay-03s animated wow  zoomIn"> <span><a href="..."><img class="img-responsive" src="img/git.png" align=""></a></span> </div>
           <div class="service_block"><h3 class="animated fadeInUp wow">Github repository</h3></div>
       </div>
   
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
           <div class="service_icon_r delay-03s animated wow  zoomIn"> <span><a href="https://codalab.lisn.upsaclay.fr/competitions/8007"><img class="img-responsive" src="img/challenge.png" align=""></a></span> </div>
           <div class="service_block"><h3 class="animated fadeInUp wow">Challenge</h3></div>
       </div>
@@ -267,7 +261,7 @@
           <div class="service_icon_r delay-03s animated wow  zoomIn"> <span><a href="img/poster.png"><img class="img-responsive" src="img/poster_icon.png" align=""></a></span> </div>
           <div class="service_block"><h3 class="animated fadeInUp wow">Poster</h3></div>
       </div>
-      </div>
+      </div>-->
     </div>
 
     <!-- </div> -->
@@ -298,13 +292,14 @@
     <h2>Download</h2>
 	<h3><center><font size="5">Terms of use</font></center></h3>
   <br>
-  <font size="3">Copyright for MUAD Dataset is owned by Université Paris-Saclay (SATIE Laboratory, Gif-sur-Yvette, FR) and ENSTA Paris (U2IS Laboratory, Palaiseau, FR).
+  <font size="3">Copyright for InfraParis Dataset is owned by ENSTA Paris (U2IS Laboratory, Palaiseau, FR).
     <br>
     <br>
-  <b>If you need MUAD Dataset, please Click and Fill in this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTyCCPoO-MrVWKrp5hqyy4Bp9wZKh2Ww7_0MRnk-uu4Wf1yA/viewform?usp=sf_link">Google form.</a> We provide you with permanent download links as soon as you finish submitting the form. </b>
+     <b> We will provide you with permanent download links after december.
+  <!-- <b>If you need In Dataset, please Click and Fill in this <a href="https://docs.google.com/">Google form.</a> We provide you with permanent download links as soon as you finish submitting the form. </b> -->
   <br>
   <br>
-  <b>[Note] We will release all the test sets (with the RGB images and the ground truth maps) after the MUAD challenge on the Codalab. Currently, only a small part of the test sets is released with only the RGB images.</b>
+  <b>[Note] We will release all the test sets (with the RGB images and the ground truth maps) after the InfraParis challenge on the Codalab. Currently, only a small part of the test sets is released with only the RGB images.</b>
   
   <!-- <ul class="about-us-list"> -->
       <!-- <li class="points"><b>If you need MUAD Dataset, please:</b></li> -->
@@ -318,7 +313,8 @@
   <br>
   <h3><center><font size="5">Acknowledgments</font></center></h3>
   <br>
-  <font size="3">We gratefully acknowledge the support of DATAIA Paris-Saclay institute which supported the creation of the dataset (ANR–17–CONV–0003/RD42). We are also grateful to Yan Chen for his help with the early processing of the dataset, as well as the many staff who worked hard to generate the dataset. </font>
+  <font size="3">We gratefully acknowledge the support of  AID Project ACoCaTherm which supported the creation of the dataset. We are also grateful to Remi KAZMIERCZAK and Adrien LAFAGE
+ for their help with the early processing of the dataset, as well as the many staff who worked hard to annotate the dataset. </font>
 
  <div class="service_wrapper">
 </div>
@@ -334,18 +330,19 @@
     <font size="3">If you use MUAD in your work, please cite this publication:</font>
       <ul class="about-us-list">
         <br>
-            <li class="points"><b>@inproceedings{Franchi2022MUAD,</b></li>
-            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; title={MUAD: Multiple Uncertainties for Autonomous Driving, a benchmark for multiple uncertainty types and tasks},</b></li> 
-            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; author={Franchi, Gianni and Yu, Xuanlong and Bursuc, Andrei and Tena, Angel and Kazmierczak, R{\'e}mi and Dubuisson, S{\'e}verine and Aldea, Emanuel and Filliat, David},</b></li>
-            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; booktitle={33rd British Machine Vision Conference 2022, {BMVC} 2022, London, UK, November 21-24, 2022},</b></li>
-            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; publisher={{BMVA} Press},</b></li>
-            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; year={2022},</b></li>
-            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; url={https://bmvc2022.mpi-inf.mpg.de/0398.pdf}</b></li>
+            <li class="points"><b>@inproceedings{franchi2023infraparis,</b></li>
+            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; title={InfraParis: A multi-modal and multi-task autonomous driving dataset},</b></li> 
+            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; author={Franchi, Gianni and Hariat, Marwane and Yu, Xuanlong and Belkhir, Nacim and Manzanera, Antoine and Filliat, David},</b></li>
+            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; booktitle={WACV 2024},</b></li>
+            <!--<li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; publisher={{BMVA} Press},</b></li>-->
+            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; year={2024},</b></li>
+            <li class="points"><b>&nbsp;&nbsp;&nbsp;&nbsp; url={https://arxiv.org/abs/2309.15751}</b></li>
             <li class="points"><b>}</b></li>
           </ul>
   </div>
 </section>
 <!--citation-->  
+
 
 
 <!--contact-->
@@ -363,28 +360,21 @@
           </div>
         </div>
         <div class="col-md-3"> 
+          <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/marwane.jpg" align=""></span> </div>
+          <div class="service_block">
+          <h3 class="animated fadeInUp wow">Marwane Hariat</h3>
+      <p class="animated fadeInDown wow">U2IS, ENSTA Paris, Institut Polytechnique de Paris</p>
+      
+          </div>
+        </div>
+
+      <div class="col-md-3">
           <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/xuanlong.jpg" align=""></span> </div>
           <div class="service_block">
           <h3 class="animated fadeInUp wow">Xuanlong Yu</h3>
       <p class="animated fadeInDown wow">SATIE, Paris Saclay University <br> U2IS, ENSTA Paris, Institut Polytechnique de Paris</p>
       
           </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/abursuc.jpg" align=""></span> </div>
-              <div class="service_block">
-              <h3 class="animated fadeInUp wow">Andrei Bursuc</h3>
-          <p class="animated fadeInDown wow">valeo.ai</p>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/angel.jpg" align=""></span> </div>
-            <div class="service_block">
-            <h3 class="animated fadeInUp wow">Ángel Tena</h3>
-        <p class="animated fadeInDown wow">Anyverse</p>
-      </div>
     </div>
 
     
@@ -394,28 +384,21 @@
     <div class="row">
 
       <div class="col-md-3"> 
-        <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/remi.jpg" align=""></span> </div>
+        <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/nacim.jpg" align=""></span> </div>
         <div class="service_block">
-        <h3 class="animated fadeInUp wow">Rémi Kazmierczak</h3>
-    <p class="animated fadeInDown wow">U2IS, ENSTA Paris, Institut Polytechnique de Paris</p>
+        <h3 class="animated fadeInUp wow">Nacim Belkhir</h3>
+    <p class="animated fadeInDown wow">SafranTech</p>
         </div>
       </div>
 
       <div class="col-md-3"> 
-        <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/serv.jpg" align=""></span> </div>
+        <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/antoine.jpg" align=""></span> </div>
         <div class="service_block">
-        <h3 class="animated fadeInUp wow">Séverine Dubuisson</h3>
-    <p class="animated fadeInDown wow">LIS, Aix Marseille University</p>
+        <h3 class="animated fadeInUp wow">Antoine Manzanera</h3>
+    <p class="animated fadeInDown wow">U2IS, ENSTA Paris, Institut Polytechnique de Paris</p>
         </div>
       </div>
       
-        <div class="col-md-3">
-          <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/emi.jpg" align=""></span> </div>
-          <div class="service_block">
-          <h3 class="animated fadeInUp wow">Emanuel Aldea</h3>
-      <p class="animated fadeInDown wow">SATIE, Paris Saclay University</p>
-            </div>
-          </div>
 
       <div class="col-md-3">
         <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/david.jpg" align=""></span> </div>
@@ -441,13 +424,13 @@
     </div>
 
     <div class="col-md-4">
-      <h3 class="animated fadeInUp wow">Emanuel Aldea</h3>
-      <h3 class="animated fadeInUp wow">emanuel.aldea at universite-paris-saclay.fr</h3>
+      <h3 class="animated fadeInUp wow">Marwane Hariat</h3>
+      <h3 class="animated fadeInUp wow">marwane.hariat at ensta-paris.fr</h3>
       </div>
 
     <div class="col-md-4">
       <h3 class="animated fadeInUp wow">Xuanlong Yu</h3>
-      <h3 class="animated fadeInUp wow">xuanlong.yu at universite-paris-saclay.fr</h3>
+      <h3 class="animated fadeInUp wow">xuanlong.yu at ensta-paris.fr</h3>
         </div>
 
         </div>
@@ -463,7 +446,7 @@
 <!--Footer-->
 <footer class="footer_wrapper">
   <div class="container">
-    <div class="footer_bottom"><span>Copyright © 2022 - <a href="https://muad-dataset.github.io/">MUAD</a>, Template by <a href="http://webthemez.com">WebThemez.com</a> </span> </div>
+    <div class="footer_bottom"><span>Copyright © 2024 - <a href="https://muad-dataset.github.io/">MUAD</a>, Template by <a href="http://webthemez.com">WebThemez.com</a> </span> </div>
   </div>
 </footer>
 
