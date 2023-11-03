@@ -22,8 +22,8 @@
  <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
+        <!-- <li data-target="#carousel" data-slide-to="1"></li> -->
+        <!-- <li data-target="#carousel" data-slide-to="2"></li> -->
     </ol>
     <!-- Carousel items -->
     <div class="carousel-inner">
@@ -31,10 +31,10 @@
     <div class="active item">
 		<div class="caption zoomIn wow animated"> 		 
         <h2>InfraParis Dataset</h2><br/><h4><strong>A multi-modal and multi-task autonomous driving dataset</strong></h4>
-    </div><img class="" src="img/slide3.jpg" alt="">
+    </div><img class="" src="img/slide0.jpg" alt="">
     </div>
     
-    <div class="item">
+    <!-- <div class="item">
 		<div class="caption zoomIn wow animated"> 		 			 
         <h2>InfraParis Dataset</h2><br/><h4><strong>7,301 annotated images with different modalities and tasks. </strong></h4>
     </div><img class="d-block w-100" src="img/slide2.jpg" alt="">
@@ -44,7 +44,7 @@
 		<div class="caption zoomIn wow animated"> 		 			
       <h2>InfraParis Dataset</h2><br/><h4><strong>4 supported computer vision tasks</strong></h4>
     </div><img class="" src="img/slide1.jpg" alt="">
-    </div>
+    </div> -->
 
     </div>
     
@@ -92,25 +92,25 @@
       <div class="col-md-6">
         <h3><font size="5">InfraParis</font></h3>
         <p>We present InfraParis, an extensive dataset designed for autonomous driving applications. This dataset is characterized by its multimodal and multitasking nature, encompassing a total of 7,301 data samples. Specifically, it consists of 6,567 images in the training set, 189 in the validation set, and 571 in the test set. InfraParis is structured to support various tasks across three distinct modalities: RGB, depth, and infrared. These tasks encompass object detection, semantic segmentation, and depth prediction.</p> 
+          <p><b>InfraParis encompasses four distinct tasks, each catering to different aspects of autonomous driving:</b></p>
+          <ul class="about-us-list">
+              <li class="points2"><b>Semantic Segmentation Task</b>: This task involves images with associated semantic segmentation labels.</li> 
+              <li class="points2"><b>Object Detection Tas</b>: In this task, the dataset provides images with bounding boxes delineating pedestrians.</li> 
+              <li class="points2"><b>Supervised Depth Prediction Task</b>: For this task, the dataset includes images with ground truth depth information.</li> 
+              <li class="points2"><b>Unsupervised Depth Prediction Task</b>: Here, the dataset comprises sequences of images along with ground truth depth data.</li>  
+            </ul>
           <img class="img-responsive" src="img/examples.png" align=""> 
-      </div>
+        </div>
       
       <div class="col-md-6">
-        <p><b>      InfraParis encompasses four distinct tasks, each catering to different aspects of autonomous driving:</b></p>
-        <ul class="about-us-list">
-            <li class="points2"><b>Semantic Segmentation Task</b>:This task involves images with associated semantic segmentation labels.</li> 
-            <li class="points2"><b>Object Detection Tas</b>: In this task, the dataset provides images with bounding boxes delineating pedestrians.</li> 
-            <li class="points2"><b>Supervised Depth Prediction Task</b>: For this task, the dataset includes images with ground truth depth information.</li> 
-            <li class="points2"><b>Unsupervised Depth Prediction Task</b>: Here, the dataset comprises sequences of images along with ground truth depth data.</li>  
-          </ul>
-      <div class="col-md-6">
+
+
         <p><b>InfraParis has 4 modalities:</b></p>
         <ul class="about-us-list">
             <li class="points2"><b>RGB Images</b></li> 
             <li class="points2"><b>Infrared Images</b></li>
             <li class="points2"><b>RGB Video</b></li>
             <li class="points2"><b>Depth Images </b></li> 
-   
           </ul>
 
 
@@ -359,6 +359,7 @@
             <p class="animated fadeInDown wow">U2IS, ENSTA Paris, Institut Polytechnique de Paris</p>
           </div>
         </div>
+        
         <div class="col-md-3"> 
           <div class="service_icon delay-03s animated wow  zoomIn"> <span><img class="img-responsive" src="img/marwane.jpg" align=""></span> </div>
           <div class="service_block">
