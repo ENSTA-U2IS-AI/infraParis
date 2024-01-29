@@ -22,9 +22,9 @@ David Filliat (U2IS, ENSTA Paris, Institut Polytechnique de Paris)
 
 ### CONTACT
 If you have any questions (about the dataset or this website), please feel free to contact (replace at by @):
-Gianni Franchi gianni.franchi at ensta-paris.fr
-Marwane Hariat marwane.hariat at ensta-paris.fr
-Xuanlong Yu  xuanlong.yu at ensta-paris.fr
+* Gianni Franchi gianni.franchi at ensta-paris.fr
+* Marwane Hariat marwane.hariat at ensta-paris.fr
+* Xuanlong Yu  xuanlong.yu at ensta-paris.fr
 
 ## CITE US
 
