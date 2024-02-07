@@ -2,7 +2,7 @@
 # InfraParis
 
 We present InfraParis, an extensive dataset designed for autonomous driving applications. 
-This dataset is characterized by its multimodal and multitasking nature, encompassing a total of  ** 7,301 **  data samples. Specifically, it consists of **6,567** images in the training set, 189 in the validation set, and 571 in the test set. InfraParis is structured to support various tasks across three distinct modalities: *RGB*, *depth*, and *infrared*. These tasks encompass *object detection*, *semantic segmentation*, and *depth prediction*.
+This dataset is characterized by its multimodal and multitasking nature, encompassing a total of  **7,301**  data samples. Specifically, it consists of **6,567** images in the training set, **189** in the validation set, and **571** in the test set. InfraParis is structured to support various tasks across three distinct modalities: *RGB*, *depth*, and *infrared*. These tasks encompass *object detection*, *semantic segmentation*, and *depth prediction*.
 
 InfraParis encompasses four distinct tasks, each catering to different aspects of autonomous driving:
 
